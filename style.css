@@ -9,13 +9,13 @@ body {
   content:'';
   height: 100vh;
   width: 100%;
-  background-image: url(bg.jpg);
+  background-image: url(bg4.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   display: block;
-  filter: blur(10px);
-  -webkit-filter: blur(10px);
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
   transition: all 1000ms;
 }
 
@@ -31,7 +31,7 @@ body {
 .content {
   position: absolute;
   z-index: 1;
-  top: 10%;
+  top: 30%;
   left: 50%;
   margin-top: 105px;
   margin-left: -145px; 
@@ -46,10 +46,12 @@ body {
   width: 180px;
 }
 .content .title {
-  font-size: 2.2rem;
-  margin-top: 1rem;
+  font-family: 'Dosis', sans-serif;
+  font-size: 3.2rem;
+  margin-top: 0.5rem;
 }
 .content .text {
+  font-family: 'Dosis', sans-serif;
   line-height: 1.7;
   margin-top: 1rem;
 }
@@ -66,6 +68,11 @@ body {
   grid-gap: 20px;
   grid-template-columns: repeat(3, 1fr);
 }
+.grid-2 {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+}
 
 .center {
   text-align: center;
@@ -76,3 +83,60 @@ body {
   background: #f4f4f4;
   color: #333;
 }
+
+.bg-dark {
+  background: #333;
+  color: #f4f4f4;
+}
+
+footer p {
+  margin: 0;
+}
+footer {
+  padding: 1.5rem;
+}
+
+/* Small screens */
+@media(max-width:560px) {
+  .showcase::after {
+    height: 50vh;
+  }
+
+  .content {
+    top: 5%;
+    margin-top: 5px;
+  }
+
+  .content .logo {
+    height: 140px;
+    width: 140px;
+  }
+
+  .content .text {
+    display: none;
+  }
+  .grid-3 {
+    grid-template-columns:1fr;
+  }
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .services div {
+    border-bottom: #333 dashed 1px;
+    padding: 1.2rem 1rem;
+  }
+}
+
+
+/* Landscape */
+@media(max-height:500px) {
+  .content .title, .content .text {
+    display: none;
+  }
+  .content {
+    top: 7%;
+  }
+
+}
+
